@@ -85,7 +85,7 @@
                     </ul>
                 </div>
                 <div class="col-xs-4 text-xs-center">
-                    <a href="photo_add.html?q={{q}}" class="add_button btn btn-primary m-t-2"><i class="fa fa-camera" aria-hidden="true"></i> add</a>
+                    <a href="photo_add.html?q={{ q.number }}" class="add_button btn btn-primary m-t-2"><i class="fa fa-camera" aria-hidden="true"></i> add</a>
                 </div>
             </div>
         </div>
@@ -112,10 +112,36 @@
 <script src="libs/plugins-scroll/plugins-scroll.js"></script>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
 <script src="js/vendor/jquery.ui.widget.js"></script>
-<script src="js/jquery.iframe-transport.js"></script>
-<script src="js/jquery.fileupload-angular.js"></script>
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- blueimp Gallery script -->
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="js/vendor/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="js/vendor/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="js/vendor/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="js/vendor/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<script src="js/vendor/jquery.fileupload-audio.js"></script>
+
+<!-- The File Upload validation plugin -->
+<script src="js/vendor/jquery.fileupload-validate.js"></script>
+<!-- The File Upload user interface plugin -->
+<script src="js/vendor/jquery.fileupload-ui.js"></script>
+
 
 
 <script src="js/common.js"></script>

@@ -86,47 +86,27 @@
 
 					<p>Добавление фотографии к посылке {{q.number}}</p>
 					<p>Клиента {{q.client}}</p>
-
-					<ul class="list-unstyled text-xs-center text-sm-left">
-						<li ng-repeat="photo in q.photos">
-							<span>
-								<span class="photos" ng-style="{'background-image':'url('+photo.src+')'}"></span>
-							</span>
-							<div class="clearfix"></div>
-							<a href="#">{{photo.name}}</a>
-						</li>
-					</ul>
-
-					<button ng-click="addPhoto(q)" class="add_button btn btn-primary m-t-2"><i class="fa fa-camera" aria-hidden="true"></i> Добавить фото</button>
-
-
 				</div>
-
 				<div class="clearfix m-t-3"></div>
-
-				<form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data" class="">
-				<!-- Redirect browsers with JavaScript disabled to the origin page -->
-				<noscript>&lt;input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"&gt;</noscript>
-				<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+				<form id="fileupload" action="#" method="POST" enctype="multipart/form-data" class="">
 				<div class="row fileupload-buttonbar">
 					<div class="col-lg-7">
-						<!-- The fileinput-button span is used to style the file input field as button -->
 						<span class="btn btn-success fileinput-button">
                     <i class="glyphicon glyphicon-plus"></i>
-                    <span>Add files...</span>
+                    <span><i class="fa fa-camera" aria-hidden="true"></i> Добавить фото</span>
                     <input type="file" name="files[]" multiple="">
                 </span>
 						<button type="submit" class="btn btn-primary start">
 							<i class="glyphicon glyphicon-upload"></i>
-							<span>Start upload</span>
+							<span><i class="fa fa-upload" aria-hidden="true"></i> Старт</span>
 						</button>
 						<button type="reset" class="btn btn-warning cancel">
 							<i class="glyphicon glyphicon-ban-circle"></i>
-							<span>Cancel upload</span>
+							<span><i class="fa fa-times" aria-hidden="true"></i> Отменить</span>
 						</button>
 						<button type="button" class="btn btn-danger delete">
 							<i class="glyphicon glyphicon-trash"></i>
-							<span>Delete</span>
+							<span><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</span>
 						</button>
 						<input type="checkbox" class="toggle">
 						<!-- The global file processing state -->
@@ -146,7 +126,6 @@
 				<table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
 			</form>
 
-
 				<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
 					<div class="slides"></div>
 					<h3 class="title"></h3>
@@ -156,6 +135,12 @@
 					<a class="play-pause"></a>
 					<ol class="indicator"></ol>
 				</div>
+
+
+				<button ng-click="send()" class="btn btn-primary">Сохранить</button>
+
+
+
 
 
 			</div>
@@ -179,14 +164,12 @@
         <td>
             {% if (!i && !o.options.autoUpload) { %}
                 <button class="btn btn-primary start" disabled>
-                    <i class="glyphicon glyphicon-upload"></i>
-                    <span>Start</span>
+                    <span><i class="fa fa-upload" aria-hidden="true"></i> Старт</span>
                 </button>
             {% } %}
             {% if (!i) { %}
                 <button class="btn btn-warning cancel">
-                    <i class="glyphicon glyphicon-ban-circle"></i>
-                    <span>Cancel</span>
+                    <span><i class="fa fa-times" aria-hidden="true"></i> Отменить</span>
                 </button>
             {% } %}
         </td>
@@ -223,7 +206,7 @@
             {% if (file.deleteUrl) { %}
                 <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
                     <i class="glyphicon glyphicon-trash"></i>
-                    <span>Delete</span>
+                    <span><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</span>
                 </button>
                 <input type="checkbox" name="delete" value="1" class="toggle">
             {% } else { %}
@@ -239,8 +222,6 @@
 
 
 </div>
-
-
 
 
 <!--[if lt IE 9]>
