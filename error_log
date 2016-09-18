@@ -1,0 +1,8 @@
+[Sun Sep 18 15:46:37.639500 2016] [authz_core:error] [pid 4647] [client 127.0.0.1:33510] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/
+[Sun Sep 18 15:46:37.938576 2016] [authz_core:error] [pid 4647] [client 127.0.0.1:33510] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/favicon.ico, referer: http://myapp.io/
+[Sun Sep 18 15:46:47.043972 2016] [authz_core:error] [pid 4655] [client 127.0.0.1:33512] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/
+[Sun Sep 18 15:46:47.225546 2016] [authz_core:error] [pid 4655] [client 127.0.0.1:33512] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/favicon.ico, referer: http://myapp.io/
+[Sun Sep 18 15:47:18.557400 2016] [authz_core:error] [pid 4643] [client 127.0.0.1:33552] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/
+[Sun Sep 18 15:47:18.919524 2016] [authz_core:error] [pid 4643] [client 127.0.0.1:33552] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/favicon.ico, referer: http://myapp.io/
+[Sun Sep 18 15:47:20.515946 2016] [authz_core:error] [pid 4643] [client 127.0.0.1:33552] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/
+[Sun Sep 18 15:47:20.678398 2016] [authz_core:error] [pid 4643] [client 127.0.0.1:33552] AH01630: client denied by server configuration: /home/gordondalos/www/myapp/favicon.ico, referer: http://myapp.io/
