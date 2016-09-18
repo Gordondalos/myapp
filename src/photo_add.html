@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+
+
+
+</head>
+
+<body ng-app="myApp">
+
+<section class="section_1 bg-faded">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 p-x-0">
+				<nav class="navbar bavbar-light bg-faded">
+					<div class="col-sm-1 col-xs-2 p-x-0">
+						<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse"
+								data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false"
+								aria-label="Toggle navigation">
+							&#9776;
+						</button>
+					</div>
+					<div class="col-xs-10 col-sm-12">
+						<div class="row">
+							<div class="input-group ">
+								<input ng-model="search" type="text" class="form-control" placeholder="Search for...">
+								<span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </span>
+							</div>
+						</div>
+					</div>
+					<div class="collapse navbar-toggleable-xs p-t-1" id="exCollapsingNavbar2">
+						<a class="navbar-brand" href="index.html">Photo manager</a>
+						<div class="clearfix hidden-sm-up"></div>
+						<ul class="nav navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Features</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Pricing</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">About</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div ng-controller="PhotoController">
+	<section class="section_3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-xs-center p-t-1 text-sm-left">
+
+					<p>Добавление фотографии к посылке {{q.number}}</p>
+					<p>Клиента {{q.client}}</p>
+
+					<ul class="list-unstyled text-xs-center text-sm-left">
+						<li ng-repeat="photo in q.photos">
+							<span>
+								<span class="photos" ng-style="{'background-image':'url('+photo.src+')'}"></span>
+							</span>
+							<div class="clearfix"></div>
+							<a href="#">{{photo.name}}</a>
+						</li>
+					</ul>
+
+					<button ng-click="addPhoto(q)" class="add_button btn btn-primary m-t-2"><i class="fa fa-camera" aria-hidden="true"></i> Добавить фото</button>
+
+
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+
+</div>
+
+
+
+
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+
+
+<script src="libs/modernizr/modernizr.js"></script>
+<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="libs/waypoints/waypoints.min.js"></script>
+<script src="libs/animate/animate-css.js"></script>
+<script src="libs/plugins-scroll/plugins-scroll.js"></script>
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
